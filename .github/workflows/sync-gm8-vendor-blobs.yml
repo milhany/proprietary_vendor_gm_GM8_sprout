@@ -85,12 +85,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if git diff --quiet --exit-code -- proprietary/; then
+          git add proprietary/
+          if git diff --cached --quiet --exit-code; then
             echo "Vendor blobs are already synchronized."
             exit 0
           fi
           git config user.name "GM8 Vendor Sync"
           git config user.email "gm8-vendor-sync@users.noreply.github.com"
-          git add proprietary/
           git commit -m "GM8_sprout: Restore missing Android 11 vendor blobs"
           git push origin HEAD:lineage-18.1-rework
