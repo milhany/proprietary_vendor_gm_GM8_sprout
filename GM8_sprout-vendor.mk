@@ -2626,6 +2626,3 @@ PRODUCT_COPY_FILES += \
     vendor/gm/GM8_sprout/proprietary/product/media/audio/notifications/hangouts_message.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/hangouts_message.ogg \
     vendor/gm/GM8_sprout/proprietary/product/media/audio/alarms/Oxygen.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Oxygen.ogg
 
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.0-service-qti \
-    vendor.qti.gnss@3.0-service
