@@ -2624,3 +2624,9 @@ PRODUCT_COPY_FILES += \
     vendor/gm/GM8_sprout/proprietary/product/media/audio/notifications/hangouts_message.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/hangouts_message.ogg \
     vendor/gm/GM8_sprout/proprietary/product/media/audio/alarms/Oxygen.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Oxygen.ogg
 
+
+
+# GM8 stock runtime dependencies restored for Android 11 compatibility
+PRODUCT_COPY_FILES += \
+    vendor/gm/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.perf@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.perf@1.0.so \
+    vendor/gm/GM8_sprout/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
