@@ -2620,7 +2620,7 @@ PRODUCT_COPY_FILES += \
 
 # General Mobile stock OEM media
 PRODUCT_COPY_FILES += \
-    vendor/gm/GM8_sprout/proprietary/product/media/audio/ringtones/GeneralMobile.mp3:$(TARGET_COPY_OUT_PRODUCT)/media/audio/ringtones/GeneralMobile.mp3 \
+    vendor/gm/GM8_sprout/proprietary/product/media/audio/ringtones/GeneralMobile.mp3:$(TARGET_COPY_OUT_SYSTEM)/media/audio/ringtones/GeneralMobile.mp3 \
     vendor/gm/GM8_sprout/proprietary/product/media/audio/notifications/hangouts_message.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/notifications/hangouts_message.ogg \
     vendor/gm/GM8_sprout/proprietary/product/media/audio/alarms/Oxygen.ogg:$(TARGET_COPY_OUT_PRODUCT)/media/audio/alarms/Oxygen.ogg
 
