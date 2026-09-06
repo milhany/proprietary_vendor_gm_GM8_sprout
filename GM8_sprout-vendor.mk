@@ -2628,5 +2628,4 @@ PRODUCT_COPY_FILES += \
 
 # GM8 stock runtime dependencies restored for Android 11 compatibility
 PRODUCT_COPY_FILES += \
-    vendor/gm/GM8_sprout/proprietary/vendor/lib64/vendor.qti.hardware.perf@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.hardware.perf@1.0.so \
     vendor/gm/GM8_sprout/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
