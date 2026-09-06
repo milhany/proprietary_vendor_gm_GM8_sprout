@@ -5,6 +5,23 @@
 soong_namespace {
 }
 
+cc_prebuilt_binary {
+    name: "gm8_gnss_service",
+    stem: "android.hardware.gnss@2.0-service-qti",
+    owner: "gm",
+    srcs: ["proprietary/vendor/bin/hw/android.hardware.gnss@2.0-service-qti"],
+    vendor: true,
+    relative_install_path: "hw",
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+    init_rc: ["proprietary/vendor/etc/init/android.hardware.gnss@2.0-service-qti.rc"],
+    vintf_fragments: ["proprietary/vendor/etc/vintf/manifest/gm8_gnss.xml"],
+}
+
+
 android_app_import {
 	name: "CneApp",
 	owner: "gm",
