@@ -92,6 +92,18 @@ detect_gm8_multisim()
                 identity="$identity `cat /persist/gm8_variant 2>/dev/null`"
             fi
 
+            # Firmware-backed Qualcomm regionalization data survives system/vendor
+            # replacement and may retain the stock GM8 / GM8_d product identity.
+            for spec_file in \
+                /persist/speccfg/vendor_ro.prop \
+                /persist/speccfg/system_ro.prop \
+                /persist/speccfg/product_ro.prop \
+                /persist/speccfg/spec; do
+                if [ -r "$spec_file" ]; then
+                    identity="$identity `cat "$spec_file" 2>/dev/null`"
+                fi
+            done
+
             identity_lc=`echo "$identity" | tr '[:upper:]' '[:lower:]'`
             case "$identity_lc" in
                 *gm8_d_sprout* | *gm8_d* | *"gm 8 d"* | *tel_l2300_a01* | *l2300_a01* | *"gm8 dual"* | *"dual sim"*)
@@ -107,8 +119,9 @@ detect_gm8_multisim()
             ;;
     esac
 
+    current_multisim=`getprop persist.radio.multisim.config`
     if [ -n "$desired_multisim" ]; then
-        current_multisim=`getprop persist.radio.multisim.config`
+        setprop vendor.gm8.multisim.config "$desired_multisim"
         if [ "$current_multisim" != "$desired_multisim" ]; then
             log -p i -t GM8Variant "setting multisim $current_multisim -> $desired_multisim"
             setprop persist.radio.multisim.config "$desired_multisim"
@@ -116,7 +129,8 @@ detect_gm8_multisim()
             log -p i -t GM8Variant "multisim already $desired_multisim"
         fi
     else
-        log -p w -t GM8Variant "variant not exposed by bootloader; keeping persist.radio.multisim.config=`getprop persist.radio.multisim.config`"
+        setprop vendor.gm8.multisim.config "$current_multisim"
+        log -p w -t GM8Variant "firmware variant not exposed; keeping persist.radio.multisim.config=$current_multisim"
     fi
 }
 
