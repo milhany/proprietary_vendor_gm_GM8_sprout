@@ -45,6 +45,83 @@ else
     soc_hwver=`cat /sys/devices/system/soc/soc0/platform_version` 2> /dev/null
 fi
 
+#
+# GM8 single/dual-SIM auto detection.
+#
+# Stock firmware identifies the variants as:
+#   GM8_sprout / tel_l2300_b01 -> single SIM (ssss)
+#   GM8_d_sprout / tel_l2300_a01 -> dual SIM (dsds)
+#
+# Prefer immutable bootloader/device-tree identity.  Keep the existing radio
+# property if a bootloader does not expose a usable variant string.  A
+# persist.vendor.gm8.multisim_override value of single/dual can be used as a
+# deterministic fallback without maintaining separate ROM builds.
+#
+detect_gm8_multisim()
+{
+    override=`getprop persist.vendor.gm8.multisim_override`
+    case "$override" in
+        "dual" | "dsds")
+            desired_multisim="dsds"
+            ;;
+        "single" | "ssss")
+            desired_multisim="ssss"
+            ;;
+        *)
+            identity="`getprop ro.boot.product.device` \
+`getprop ro.boot.product.name` \
+`getprop ro.boot.product.vendor.device` \
+`getprop ro.boot.product.vendor.name` \
+`getprop ro.boot.hardware.sku` \
+`getprop ro.boot.hwc` \
+`getprop ro.boot.bootloader`"
+
+            if [ -r /proc/cmdline ]; then
+                identity="$identity `cat /proc/cmdline 2>/dev/null`"
+            fi
+            if [ -r /sys/firmware/devicetree/base/model ]; then
+                identity="$identity `tr '\\000' ' ' < /sys/firmware/devicetree/base/model 2>/dev/null`"
+            fi
+            if [ -r /sys/firmware/devicetree/base/compatible ]; then
+                identity="$identity `tr '\\000' ' ' < /sys/firmware/devicetree/base/compatible 2>/dev/null`"
+            fi
+            if [ -r /vendor/firmware_mnt/verinfo/ver_info.txt ]; then
+                identity="$identity `cat /vendor/firmware_mnt/verinfo/ver_info.txt 2>/dev/null`"
+            fi
+            if [ -r /persist/gm8_variant ]; then
+                identity="$identity `cat /persist/gm8_variant 2>/dev/null`"
+            fi
+
+            identity_lc=`echo "$identity" | tr '[:upper:]' '[:lower:]'`
+            case "$identity_lc" in
+                *gm8_d_sprout* | *gm8_d* | *"gm 8 d"* | *tel_l2300_a01* | *l2300_a01* | *"gm8 dual"* | *"dual sim"*)
+                    desired_multisim="dsds"
+                    ;;
+                *tel_l2300_b01* | *l2300_b01* | *gm8_sprout* | *"gm8 single"* | *"single sim"*)
+                    desired_multisim="ssss"
+                    ;;
+                *)
+                    desired_multisim=""
+                    ;;
+            esac
+            ;;
+    esac
+
+    if [ -n "$desired_multisim" ]; then
+        current_multisim=`getprop persist.radio.multisim.config`
+        if [ "$current_multisim" != "$desired_multisim" ]; then
+            log -p i -t GM8Variant "setting multisim $current_multisim -> $desired_multisim"
+            setprop persist.radio.multisim.config "$desired_multisim"
+        else
+            log -p i -t GM8Variant "multisim already $desired_multisim"
+        fi
+    else
+        log -p w -t GM8Variant "variant not exposed by bootloader; keeping persist.radio.multisim.config=`getprop persist.radio.multisim.config`"
+    fi
+}
+
+detect_gm8_multisim
+
 
 # Dynamic Memory Managment (DMM) provides a sys file system to the userspace
 # that can be used to plug in/out memory that has been configured as unstable.
