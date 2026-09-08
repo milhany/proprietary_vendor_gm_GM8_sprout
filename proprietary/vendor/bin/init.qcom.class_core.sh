@@ -93,29 +93,51 @@ detect_gm8_multisim()
             fi
 
             # Firmware-backed Qualcomm regionalization data survives system/vendor
-            # replacement and may retain the stock GM8 / GM8_d product identity.
-            for spec_file in \
-                /persist/speccfg/vendor_ro.prop \
-                /persist/speccfg/system_ro.prop \
-                /persist/speccfg/product_ro.prop \
-                /persist/speccfg/spec; do
-                if [ -r "$spec_file" ]; then
-                    identity="$identity `cat "$spec_file" 2>/dev/null`"
-                fi
+            # replacement and is the authoritative source for GM8 vs GM8_d.
+            # Android 11 mounts persist at /mnt/vendor/persist while old GM
+            # blobs/scripts use /persist, so inspect both aliases.
+            explicit_multisim=""
+            for persist_root in /mnt/vendor/persist /persist; do
+                for spec_file in \
+                    "$persist_root/speccfg/vendor_ro.prop" \
+                    "$persist_root/speccfg/vendor_persist.prop" \
+                    "$persist_root/speccfg/system_ro.prop" \
+                    "$persist_root/speccfg/product_ro.prop" \
+                    "$persist_root/speccfg/spec" \
+                    "$persist_root/speccfg/devicetype" \
+                    "$persist_root/speccfg/submask" \
+                    "$persist_root/speccfg/mbnversion"; do
+                    if [ -r "$spec_file" ]; then
+                        spec_data=`cat "$spec_file" 2>/dev/null`
+                        identity="$identity $spec_data"
+                        case "`echo "$spec_data" | tr '[:upper:]' '[:lower:]'`" in
+                            *persist.radio.multisim.config=dsds* | *multisim.config=dsds*)
+                                explicit_multisim="dsds"
+                                ;;
+                            *persist.radio.multisim.config=ssss* | *multisim.config=ssss*)
+                                [ -z "$explicit_multisim" ] && explicit_multisim="ssss"
+                                ;;
+                        esac
+                    fi
+                done
             done
 
-            identity_lc=`echo "$identity" | tr '[:upper:]' '[:lower:]'`
-            case "$identity_lc" in
-                *gm8_d_sprout* | *gm8_d* | *"gm 8 d"* | *tel_l2300_a01* | *l2300_a01* | *"gm8 dual"* | *"dual sim"*)
-                    desired_multisim="dsds"
-                    ;;
-                *tel_l2300_b01* | *l2300_b01* | *gm8_sprout* | *"gm8 single"* | *"single sim"*)
-                    desired_multisim="ssss"
-                    ;;
-                *)
-                    desired_multisim=""
-                    ;;
-            esac
+            if [ -n "$explicit_multisim" ]; then
+                desired_multisim="$explicit_multisim"
+            else
+                identity_lc=`echo "$identity" | tr '[:upper:]' '[:lower:]'`
+                case "$identity_lc" in
+                    *gm8_d_sprout* | *gm8_d* | *"gm 8 d"* | *tel_l2300_a01* | *l2300_a01* | *"gm8 dual"* | *"dual sim"*)
+                        desired_multisim="dsds"
+                        ;;
+                    *tel_l2300_b01* | *l2300_b01* | *gm8_sprout* | *"gm8 single"* | *"single sim"*)
+                        desired_multisim="ssss"
+                        ;;
+                    *)
+                        desired_multisim=""
+                        ;;
+                esac
+            fi
             ;;
     esac
 
@@ -123,7 +145,7 @@ detect_gm8_multisim()
     if [ -n "$desired_multisim" ]; then
         setprop vendor.gm8.multisim.config "$desired_multisim"
         if [ "$current_multisim" != "$desired_multisim" ]; then
-            log -p i -t GM8Variant "setting multisim $current_multisim -> $desired_multisim"
+            log -p i -t GM8Variant "firmware detected multisim=$desired_multisim; setting $current_multisim -> $desired_multisim"
             setprop persist.radio.multisim.config "$desired_multisim"
         else
             log -p i -t GM8Variant "multisim already $desired_multisim"
