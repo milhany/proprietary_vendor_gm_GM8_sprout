@@ -76,7 +76,12 @@ fi
 # If USB persist config not set, set default configuration
 if [ "$(getprop persist.vendor.usb.config)" == "" -a \
 	"$(getprop init.svc.vendor.usb-gadget-hal-1-0)" != "running" ]; then
-      if [ "$esoc_link" != "" ]; then
+      # Factory diagnostic compositions are defaults for debuggable builds
+      # only. On user builds let the framework/user select USB functions.
+      # An explicitly persisted composition is left untouched above.
+      if [ "$(getprop ro.debuggable)" != "1" ]; then
+	  setprop persist.vendor.usb.config none
+      elif [ "$esoc_link" != "" ]; then
 	  setprop persist.vendor.usb.config diag,diag_mdm,qdss,qdss_mdm,serial_cdev,dpl,rmnet,adb
       else
 	  case "$(getprop ro.baseband)" in
