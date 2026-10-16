@@ -27,6 +27,10 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+# Keep this GM8 build single-SIM, including upgrades with a saved DSDS value.
+# Set the property before starting the primary RIL; no variant detection runs.
+setprop persist.radio.multisim.config ssss
+
 #
 # start ril-daemon only for targets on which radio is present
 #
@@ -124,24 +128,6 @@ case "$baseband" in
           fi
         ;;
     esac
-
-    multisim=`getprop persist.radio.multisim.config`
-
-    if [ "$multisim" = "dsds" ] || [ "$multisim" = "dsda" ]; then
-        if [[ -z "$rild_status" || "$rild_status" = "stopped" ]] && [[ -z "$vendor_rild_status" || "$vendor_rild_status" = "stopped" ]]; then
-          start vendor.qcrild2
-        else
-          start vendor.ril-daemon2
-        fi
-    elif [ "$multisim" = "tsts" ]; then
-        if [[ -z "$rild_status" || "$rild_status" = "stopped" ]] && [[ -z "$vendor_rild_status" || "$vendor_rild_status" = "stopped" ]]; then
-          start vendor.qcrild2
-          start vendor.qcrild3
-        else
-          start vendor.ril-daemon2
-          start vendor.ril-daemon3
-        fi
-    fi
 
     case "$datamode" in
         "tethered")
