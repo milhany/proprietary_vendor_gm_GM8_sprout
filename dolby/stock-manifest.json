@@ -1,0 +1,162 @@
+{
+  "repository": "https://github.com/TadiT7/gm_gm8_sprout_dump",
+  "commit": "924fe93161fc1e25cd9d79f606b733dc483d267f",
+  "files": [
+    {
+      "path": "vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service",
+      "source_path": "vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service",
+      "source_sha256": "2aa48f04cc8e8f7272773a83ea56c762078ee51093e666f3a756eb5343939e10",
+      "sha256": "2aa48f04cc8e8f7272773a83ea56c762078ee51093e666f3a756eb5343939e10",
+      "sha1": "3c26ebf23f5a9cc06464eb3a59ba184011881333",
+      "patches": []
+    },
+    {
+      "path": "vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc",
+      "source_path": "vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc",
+      "source_sha256": "6309d7603ffcecc406a12567d03339a4348087d18ee63b07133b4d5707495871",
+      "sha256": "6309d7603ffcecc406a12567d03339a4348087d18ee63b07133b4d5707495871",
+      "sha1": "1c83a265d89f3b44dd6c10a045d341896ab31987",
+      "patches": []
+    },
+    {
+      "path": "vendor/lib/libdlbdapstorage.so",
+      "source_path": "vendor/lib/libdlbdapstorage.so",
+      "source_sha256": "2cbfb0ee03182c94e4e49ad77d157aadfec28101f0d2f99dd53eab793e871aac",
+      "sha256": "2cbfb0ee03182c94e4e49ad77d157aadfec28101f0d2f99dd53eab793e871aac",
+      "sha1": "23c9fa0983003314f4be5ef662fdbf399e66769b",
+      "patches": []
+    },
+    {
+      "path": "vendor/lib/libdlbdsservice.so",
+      "source_path": "vendor/lib/libdlbdsservice.so",
+      "source_sha256": "8cb168e95fba2aed6ea82c4631094915f2fd49306e414bcd38e334cd3918b95a",
+      "sha256": "396907cbc12459b62b127aaf22cabfe6832e8c8749ca1c075f74f1ddf413e1c5",
+      "sha1": "cc3cf3f9263ca576cbeff59753f3fd0cdd28c1f0",
+      "patches": [
+        {
+          "old": "/system/etc/dolby/dax-default.xml",
+          "new": "/vendor/etc/dolby/dax-default.xml",
+          "count": 1
+        },
+        {
+          "old": "/data/misc/media/",
+          "new": "/data/vendor/ds/",
+          "count": 1
+        },
+        {
+          "remove_unused_needed": "libicuuc.so"
+        }
+      ]
+    },
+    {
+      "path": "vendor/lib/libdlbmemoryservice.so",
+      "source_path": "vendor/lib/libdlbmemoryservice.so",
+      "source_sha256": "b0c68e06018a1bbe8499714af222c2d4f516a7e3cca4f45427d3c6967fd510bc",
+      "sha256": "993ddfcc838fd3d6c669dc954eb5f3ed399daa2fc5bd2b92e03a8f4e6d9c259f",
+      "sha1": "d08b51b7ef34f2d929d02230907667b4a0c1d9da",
+      "patches": [
+        {
+          "remove_unused_needed": "libicuuc.so"
+        }
+      ]
+    },
+    {
+      "path": "vendor/lib/vendor.dolby.hardware.dms@1.0.so",
+      "source_path": "vendor/lib/vendor.dolby.hardware.dms@1.0.so",
+      "source_sha256": "071e7db97ecf1b9cda54415f07eda14574a5d4e7d274ea40a2b1a138788535b6",
+      "sha256": "071e7db97ecf1b9cda54415f07eda14574a5d4e7d274ea40a2b1a138788535b6",
+      "sha1": "6f500cd84b281345cb13b2f2d7b809aa5e5d3108",
+      "patches": []
+    },
+    {
+      "path": "vendor/lib/vendor.dolby.hardware.dms@1.0-impl.so",
+      "source_path": "vendor/lib/vendor.dolby.hardware.dms@1.0-impl.so",
+      "source_sha256": "bbd6336c55f916093a94525a9161cb9f93cfed72649148a3d75d4cf9d6257193",
+      "sha256": "bbd6336c55f916093a94525a9161cb9f93cfed72649148a3d75d4cf9d6257193",
+      "sha1": "aaa6a32fb033bc5bde18e7818c941bb8b4bee2e1",
+      "patches": []
+    },
+    {
+      "path": "vendor/lib/soundfx/libswdap.so",
+      "source_path": "vendor/lib/soundfx/libswdap.so",
+      "source_sha256": "b4e2688cff3b3beb9ef75277c1cf5ba8e1a03a073d3a5fdac1a3ac350d5cb39c",
+      "sha256": "b4e2688cff3b3beb9ef75277c1cf5ba8e1a03a073d3a5fdac1a3ac350d5cb39c",
+      "sha1": "f9a1eeccc5f2734c21281dd1ae963c4ae3d9e665",
+      "patches": []
+    },
+    {
+      "path": "vendor/lib64/libdlbdapstorage.so",
+      "source_path": "vendor/lib64/libdlbdapstorage.so",
+      "source_sha256": "23812a1c5266c4accb49da7295e7f181017d51712871f0f6f3b53c466c06ffcc",
+      "sha256": "23812a1c5266c4accb49da7295e7f181017d51712871f0f6f3b53c466c06ffcc",
+      "sha1": "60a65608dd2b476f3e6fb5c24acdb4f44ea396dd",
+      "patches": []
+    },
+    {
+      "path": "vendor/lib64/libdlbdsservice.so",
+      "source_path": "vendor/lib64/libdlbdsservice.so",
+      "source_sha256": "679842c5090f5ba66d9932c3f5fdfe2644840b561bd963b2dedb404a68da0c17",
+      "sha256": "cc594ff8c2a43f60b95b071a4f99c2c9b37132448ee940f141bc6614227040dd",
+      "sha1": "8ac539551037902c9440483021e6b5953030bd71",
+      "patches": [
+        {
+          "old": "/system/etc/dolby/dax-default.xml",
+          "new": "/vendor/etc/dolby/dax-default.xml",
+          "count": 1
+        },
+        {
+          "old": "/data/misc/media/",
+          "new": "/data/vendor/ds/",
+          "count": 1
+        },
+        {
+          "remove_unused_needed": "libicuuc.so"
+        }
+      ]
+    },
+    {
+      "path": "vendor/lib64/libdlbmemoryservice.so",
+      "source_path": "vendor/lib64/libdlbmemoryservice.so",
+      "source_sha256": "fd6f0c9a71cdf16561de402fc134e36a55ed736a88c36500aec03d02248b5807",
+      "sha256": "42cfaeb0cae9a11a6e2a4d67f648e6b9ba1046a7cec21dfa252abd0ca78a0b10",
+      "sha1": "319a16a0e5f2e964892b72d470e640099cb22896",
+      "patches": [
+        {
+          "remove_unused_needed": "libicuuc.so"
+        }
+      ]
+    },
+    {
+      "path": "vendor/lib64/vendor.dolby.hardware.dms@1.0.so",
+      "source_path": "vendor/lib64/vendor.dolby.hardware.dms@1.0.so",
+      "source_sha256": "dbf4fbf362b8e441fe8fcc042f60cb8aab2dc1e7564a8c767c40261cb09b2b45",
+      "sha256": "dbf4fbf362b8e441fe8fcc042f60cb8aab2dc1e7564a8c767c40261cb09b2b45",
+      "sha1": "e0ef1c162170099b5bc1f2ec47b95bfb2307eea2",
+      "patches": []
+    },
+    {
+      "path": "vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so",
+      "source_path": "vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so",
+      "source_sha256": "af4983ec3c1d3aab4f41b2031bfb48e071fa319544c626107648fd63958fbba2",
+      "sha256": "af4983ec3c1d3aab4f41b2031bfb48e071fa319544c626107648fd63958fbba2",
+      "sha1": "b18f610e57fc583310a54be4283fd8c3d441edd3",
+      "patches": []
+    },
+    {
+      "path": "vendor/lib64/soundfx/libswdap.so",
+      "source_path": "vendor/lib64/soundfx/libswdap.so",
+      "source_sha256": "07b55858ba43449b69de9e6a6982339f6669180434b92aecf1ebeb4fff9f9cac",
+      "sha256": "07b55858ba43449b69de9e6a6982339f6669180434b92aecf1ebeb4fff9f9cac",
+      "sha1": "b9be385d6c7ad5992f4f2ecf22e290349fe9aaca",
+      "patches": []
+    },
+    {
+      "path": "vendor/etc/dolby/dax-default.xml",
+      "source_path": "system/system/etc/dolby/dax-default.xml",
+      "source_sha256": "80f9c344c7377ede5c7f5b47b364a1bf470c17986853c2e6669a3bc9c6303900",
+      "sha256": "80f9c344c7377ede5c7f5b47b364a1bf470c17986853c2e6669a3bc9c6303900",
+      "sha1": "9e52c5d2a73661cd31ac54085855b73819e1c67c",
+      "patches": []
+    }
+  ]
+}

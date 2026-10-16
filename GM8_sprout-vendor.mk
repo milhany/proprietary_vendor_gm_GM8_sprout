@@ -2634,3 +2634,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/gm/GM8_sprout/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so \
     vendor/gm/GM8_sprout/proprietary/lib/com.qualcomm.qti.wifidisplayhal@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/com.qualcomm.qti.wifidisplayhal@1.0.so
+
+# Stock GM8 Dolby DAP dependencies (the matching DMS/effect blobs are above).
+PRODUCT_COPY_FILES += \
+    vendor/gm/GM8_sprout/proprietary/vendor/lib/libdlbdapstorage.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdlbdapstorage.so \
+    vendor/gm/GM8_sprout/proprietary/vendor/lib/libdlbdsservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdlbdsservice.so \
+    vendor/gm/GM8_sprout/proprietary/vendor/lib/libdlbmemoryservice.so:$(TARGET_COPY_OUT_VENDOR)/lib/libdlbmemoryservice.so \
+    vendor/gm/GM8_sprout/proprietary/vendor/lib/vendor.dolby.hardware.dms@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.dolby.hardware.dms@1.0-impl.so \
+    vendor/gm/GM8_sprout/proprietary/vendor/lib64/libdlbdapstorage.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdlbdapstorage.so \
+    vendor/gm/GM8_sprout/proprietary/vendor/lib64/libdlbmemoryservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdlbmemoryservice.so
