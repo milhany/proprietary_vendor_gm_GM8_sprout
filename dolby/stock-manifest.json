@@ -52,11 +52,15 @@
       "path": "vendor/lib/libdlbmemoryservice.so",
       "source_path": "vendor/lib/libdlbmemoryservice.so",
       "source_sha256": "b0c68e06018a1bbe8499714af222c2d4f516a7e3cca4f45427d3c6967fd510bc",
-      "sha256": "993ddfcc838fd3d6c669dc954eb5f3ed399daa2fc5bd2b92e03a8f4e6d9c259f",
-      "sha1": "d08b51b7ef34f2d929d02230907667b4a0c1d9da",
+      "sha256": "be76bad434c2945cc0bcd817c5fbb715a44e700a632bffff38fe3bf8955ec836",
+      "sha1": "f1154883e4958b8793af9a13f311bd897e51ce53",
       "patches": [
         {
           "remove_unused_needed": "libicuuc.so"
+        },
+        {
+          "abuffer_api27_to_api30": 8,
+          "spec": "device/gm/GM8_sprout/configs/audio/dolby_abuffer_fixups.json"
         }
       ]
     },
@@ -118,11 +122,15 @@
       "path": "vendor/lib64/libdlbmemoryservice.so",
       "source_path": "vendor/lib64/libdlbmemoryservice.so",
       "source_sha256": "fd6f0c9a71cdf16561de402fc134e36a55ed736a88c36500aec03d02248b5807",
-      "sha256": "42cfaeb0cae9a11a6e2a4d67f648e6b9ba1046a7cec21dfa252abd0ca78a0b10",
-      "sha1": "319a16a0e5f2e964892b72d470e640099cb22896",
+      "sha256": "114645a7db42639217e6d5c8b8fe8c242d6623ce55686856f6543e310e14a92b",
+      "sha1": "4047294176df8ff38150c64b8d93635fc5714b6f",
       "patches": [
         {
           "remove_unused_needed": "libicuuc.so"
+        },
+        {
+          "abuffer_api27_to_api30": 10,
+          "spec": "device/gm/GM8_sprout/configs/audio/dolby_abuffer_fixups.json"
         }
       ]
     },
