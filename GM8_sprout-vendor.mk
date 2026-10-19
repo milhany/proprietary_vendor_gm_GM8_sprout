@@ -5,6 +5,9 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/gm/GM8_sprout
 
+# The matching QTI wrapper/utils permission XMLs are installed by source
+# modules in vendor/codeaurora/telephony, selected by the device product.
+# Do not also install the extracted copies to the same system_ext paths.
 PRODUCT_COPY_FILES += \
     vendor/gm/GM8_sprout/proprietary/etc/cne/Nexus/ATT/ATT_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/ATT/ATT_profiles.xml \
     vendor/gm/GM8_sprout/proprietary/etc/cne/Nexus/ROW/ROW_profiles.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/cne/Nexus/ROW/ROW_profiles.xml \
@@ -25,8 +28,6 @@ PRODUCT_COPY_FILES += \
     vendor/gm/GM8_sprout/proprietary/system_ext/etc/permissions/dpmapi.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/dpmapi.xml \
     vendor/gm/GM8_sprout/proprietary/system_ext/etc/permissions/embms.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/embms.xml \
     vendor/gm/GM8_sprout/proprietary/system_ext/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qcrilhook.xml \
-    vendor/gm/GM8_sprout/proprietary/system_ext/etc/permissions/qti_telephony_hidl_wrapper.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_telephony_hidl_wrapper.xml \
-    vendor/gm/GM8_sprout/proprietary/system_ext/etc/permissions/qti_telephony_utils.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_telephony_utils.xml \
     vendor/gm/GM8_sprout/proprietary/system_ext/etc/permissions/telephonyservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephonyservice.xml \
     vendor/gm/GM8_sprout/proprietary/system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml \
     vendor/gm/GM8_sprout/proprietary/system_ext/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml \
