@@ -1,0 +1,1270 @@
+{
+  "donor_commit": "d476641987d8cc6c861b48dd9bffac8f9167ce53",
+  "original_commit": "69e3e328f2d2634643a562186f9c9c403397a0c5",
+  "static_checks_passed": true,
+  "kernel_compatibility": "UNTESTED",
+  "device_tested": false,
+  "files": [
+    {
+      "path": "proprietary/vendor/lib/egl/eglSubDriverAndroid.so",
+      "original": {
+        "sha256": "4add581ce9502b5025431e3e5404c2760bf24416dd426e3e29b96abb63240031",
+        "needed": [
+          "libEGL_adreno.so",
+          "libcutils.so",
+          "libhardware.so",
+          "libgsl.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "eglSubDriverAndroid.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "e6d722f712a5744fee7fd527251a65fdad9e7b17c4248025feff76e938c8d18c",
+        "needed": [
+          "libEGL_adreno.so",
+          "libcutils.so",
+          "libhardware.so",
+          "libgsl.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "eglSubDriverAndroid.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 181,
+      "added_strong_undefined_count": 9
+    },
+    {
+      "path": "proprietary/vendor/lib/egl/libEGL_adreno.so",
+      "original": {
+        "sha256": "8659d7dce4f01499e2b225631cf1862aed0ecd61f2d0d898cb3311a628713eac",
+        "needed": [
+          "libadreno_utils.so",
+          "libgsl.so",
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libEGL_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "25fdb696a0ba46245903ce416e140cce7285945b960c776f356ad6fa9dc20cfc",
+        "needed": [
+          "libadreno_utils.so",
+          "libgsl.so",
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "libEGL_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 196,
+      "added_strong_undefined_count": 11
+    },
+    {
+      "path": "proprietary/vendor/lib/egl/libGLESv1_CM_adreno.so",
+      "original": {
+        "sha256": "2d464ad2f28c528f45d645ed9a17b752f41ea13c502c13504067c390f3d1d35d",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libGLESv1_CM_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "accad227bd8956796d0335bcaf1ebccd77bce7f63c4bd3659b632fa236ddad24",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "libGLESv1_CM_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 18,
+      "added_strong_undefined_count": 8
+    },
+    {
+      "path": "proprietary/vendor/lib/egl/libGLESv2_adreno.so",
+      "original": {
+        "sha256": "bc76773552041f5274ff0b492eb14b3164dfa66c69f6611617702e089a925711",
+        "needed": [
+          "libadreno_utils.so",
+          "libgsl.so",
+          "libllvm-glnext.so",
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libGLESv2_adreno.so"
+        ],
+        "version_text": [
+          "V@331.0 (GIT@2df12b3, I07da2d9908) (Date:10/04/18)"
+        ],
+        "version_majors": [
+          331
+        ]
+      },
+      "candidate": {
+        "sha256": "cbd21ecf55c584d057afbf269e9145d12f25d9193ed29e5db481656ff1d7d5e2",
+        "needed": [
+          "libadreno_utils.so",
+          "libgsl.so",
+          "libllvm-glnext.so",
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "libGLESv2_adreno.so"
+        ],
+        "version_text": [
+          "V@415.0 (GIT@a7d4a14, Iba1deb6915, 1595513957) (Date:07/23/20)"
+        ],
+        "version_majors": [
+          415
+        ]
+      },
+      "new_needed": [],
+      "removed_export_count": 7962,
+      "added_strong_undefined_count": 24
+    },
+    {
+      "path": "proprietary/vendor/lib/egl/libq3dtools_adreno.so",
+      "original": {
+        "sha256": "ad7626d8892329834525da24a1a8c316532bec1e83df67f623c0079818aa83a2",
+        "needed": [
+          "libcutils.so",
+          "liblog.so",
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libq3dtools_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "699f2e6301a6c62bebb0cd4bdab399dbbaac3679dbb08b8009f0f364cc9c3e7a",
+        "needed": [
+          "libcutils.so",
+          "liblog.so",
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libq3dtools_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 37,
+      "added_strong_undefined_count": 22
+    },
+    {
+      "path": "proprietary/vendor/lib/egl/libq3dtools_esx.so",
+      "original": {
+        "sha256": "4151c217d6c7934924434785c03cb1b33d18ca78ca49dfaa127d213046468a13",
+        "needed": [
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libq3dtools_esx.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "675fdcae15764df0e0fe455e87b3023712e3b15a5873a10140edf8cd4fd97a9f",
+        "needed": [
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "libq3dtools_esx.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 1092,
+      "added_strong_undefined_count": 16
+    },
+    {
+      "path": "proprietary/vendor/lib/libC2D2.so",
+      "original": {
+        "sha256": "5c194c3538b583554703bad167b0418d6958bf5a4fdf345c808587534abcc3f3",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libC2D2.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "521d6264cae8020040cf2a4adec601da566a6aa1101d1c91c812d54607daff9b",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libC2D2.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 8,
+      "added_strong_undefined_count": 8
+    },
+    {
+      "path": "proprietary/vendor/lib/libCB.so",
+      "original": {
+        "sha256": "86a6680973a0385a6b97631ffbfeaf6fabd11eea721c48a012831a057c324328",
+        "needed": [
+          "libcutils.so",
+          "liblog.so",
+          "libgsl.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libCB.so"
+        ],
+        "version_text": [
+          "QUALCOMM build: commit #2df12b3 changeid #I07da2d9908 Date: 10/04/18 Thu Local Branch:  Remote Branch: "
+        ],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "c765cca4639adecd2c6ad05495c69c8e9b317384b1cd279c33f6802942898da2",
+        "needed": [
+          "libcutils.so",
+          "liblog.so",
+          "libgsl.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libCB.so"
+        ],
+        "version_text": [
+          "QUALCOMM build: commit #a7d4a14 changeid #Iba1deb6915 Date: 07/23/20 Thu Local Branch:  Remote Branch: "
+        ],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 4,
+      "added_strong_undefined_count": 17
+    },
+    {
+      "path": "proprietary/vendor/lib/libOpenCL.so",
+      "original": {
+        "sha256": "8a35066297e7f2fb153374c555463b6ca234053c6acce16d855ea749cc3cd9a1",
+        "needed": [
+          "libcutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libOpenCL.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "f042f596954a003d543464ac0733e073a3137b863a44593a3c4cc7d599ab93b9",
+        "needed": [
+          "libcutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libOpenCL.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 2,
+      "added_strong_undefined_count": 13
+    },
+    {
+      "path": "proprietary/vendor/lib/libadreno_utils.so",
+      "original": {
+        "sha256": "dd0653983fec4fe681a8ee977c74bf297e034ebbe25e75c00c942b01ee8b9025",
+        "needed": [
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libadreno_utils.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "e3376c321d1d979d42da638db3f7e47ba0c877e109eacf66fba37f0375d58bc0",
+        "needed": [
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libadreno_utils.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 21,
+      "added_strong_undefined_count": 10
+    },
+    {
+      "path": "proprietary/vendor/lib/libc2d30-a3xx.so",
+      "original": {
+        "sha256": "12f2a429b09902a829de04a2f45cec3a483ed97bf0aa7dbf94ece4bf5d8c4e9d",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libc2d30-a3xx.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "73272c374dcea34f563b47b35214da292ad2816db1d917c8d2321fdb3b11d6e6",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libc2d30-a3xx.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 5,
+      "added_strong_undefined_count": 13
+    },
+    {
+      "path": "proprietary/vendor/lib/libc2d30_bltlib.so",
+      "original": {
+        "sha256": "3b8f2f9f953d8823584b47950a06076f81040095564601aba9294a2a6779464c",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libc2d30_bltlib.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "ac781a274496d2937370cbb89b2c0f358ac93f97b853fbac53dd5ac07de569f1",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libc2d30_bltlib.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 77,
+      "added_strong_undefined_count": 13
+    },
+    {
+      "path": "proprietary/vendor/lib/libgsl.so",
+      "original": {
+        "sha256": "c254eec7ae5d6c65d7b99504dd44c299e51bd3f09364ebcdf5ef8b7e27f97e0c",
+        "needed": [
+          "libcutils.so",
+          "liblog.so",
+          "libz.so",
+          "libsync.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libgsl.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "6eefaa708ceee3c7a511c874d0cc0ce09f19ca521b074dea7cd908a324de3a8d",
+        "needed": [
+          "libcutils.so",
+          "liblog.so",
+          "libz.so",
+          "libsync.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libgsl.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 12,
+      "added_strong_undefined_count": 20
+    },
+    {
+      "path": "proprietary/vendor/lib/libllvm-glnext.so",
+      "original": {
+        "sha256": "720baf3df2d7568bbebbbe7cfcc0fa1d4c05e8518a4d2bf666994bead96824d8",
+        "needed": [
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libllvm-glnext.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "c0255ddbf6c6e6b5010c64d0d7f219c96f0d2c623644db8c4a2480b77fcf4882",
+        "needed": [
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libllvm-glnext.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 107,
+      "added_strong_undefined_count": 9
+    },
+    {
+      "path": "proprietary/vendor/lib/librs_adreno.so",
+      "original": {
+        "sha256": "53ea55711d002716e98dc860896e7469128f1a10cbf2c6f3697756c8ebdfd18a",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libCB.so",
+          "libz.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "librs_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "1e8e60efdf06eed7345ba145f370eb01bf511e34060643ef4cabcfc6f64733ea",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libCB.so",
+          "libz.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "librs_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 2,
+      "added_strong_undefined_count": 18
+    },
+    {
+      "path": "proprietary/vendor/lib64/egl/eglSubDriverAndroid.so",
+      "original": {
+        "sha256": "371acce20184d8372707a4b3d1587be2abff65f8e4a9e96624cd0003fbd35e3c",
+        "needed": [
+          "libEGL_adreno.so",
+          "libcutils.so",
+          "libhardware.so",
+          "libgsl.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "eglSubDriverAndroid.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "eb99fca78f4d14fe71268420ee018857a7588b6b4973debc4cb8778d7521d409",
+        "needed": [
+          "libEGL_adreno.so",
+          "libcutils.so",
+          "libhardware.so",
+          "libgsl.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "eglSubDriverAndroid.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 179,
+      "added_strong_undefined_count": 1
+    },
+    {
+      "path": "proprietary/vendor/lib64/egl/libEGL_adreno.so",
+      "original": {
+        "sha256": "7e8feac0023591763ea0f6a3146a2bfcfbffd680bfd890374a19b1cab8653207",
+        "needed": [
+          "libadreno_utils.so",
+          "libgsl.so",
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libEGL_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "8d7af441b996d5e3f4d8456087c63c6f723b8afa459c1102f6a990d3bee14301",
+        "needed": [
+          "libadreno_utils.so",
+          "libgsl.so",
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "libEGL_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 197,
+      "added_strong_undefined_count": 5
+    },
+    {
+      "path": "proprietary/vendor/lib64/egl/libGLESv1_CM_adreno.so",
+      "original": {
+        "sha256": "34173d95d4137fdaae299a02b1714b63fc48dcaca28ea7cea25ca6831290a2f5",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libGLESv1_CM_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "b72f9e0dd504c9af00e070f3017e1d59cc8cdacf10abf8f7723d9978ee9248e8",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "libGLESv1_CM_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 16,
+      "added_strong_undefined_count": 0
+    },
+    {
+      "path": "proprietary/vendor/lib64/egl/libGLESv2_adreno.so",
+      "original": {
+        "sha256": "b3f48e88b0238e18f18ec2617cd47c19fa9141bf47f4667fe54e841237bebafb",
+        "needed": [
+          "libadreno_utils.so",
+          "libgsl.so",
+          "libllvm-glnext.so",
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libGLESv2_adreno.so"
+        ],
+        "version_text": [
+          "V@331.0 (GIT@2df12b3, I07da2d9908) (Date:10/04/18)"
+        ],
+        "version_majors": [
+          331
+        ]
+      },
+      "candidate": {
+        "sha256": "497e1324828ee75352db421cb6136601d594c850f978f65c545c2d83e1a60336",
+        "needed": [
+          "libadreno_utils.so",
+          "libgsl.so",
+          "libllvm-glnext.so",
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "libGLESv2_adreno.so"
+        ],
+        "version_text": [
+          "V@415.0 (GIT@a7d4a14, Iba1deb6915, 1595513957) (Date:07/23/20)"
+        ],
+        "version_majors": [
+          415
+        ]
+      },
+      "new_needed": [],
+      "removed_export_count": 7961,
+      "added_strong_undefined_count": 14
+    },
+    {
+      "path": "proprietary/vendor/lib64/egl/libq3dtools_adreno.so",
+      "original": {
+        "sha256": "a3e38de678a1af92092dea6e27229cf41daa7aef38a24dba1ee99dd379585087",
+        "needed": [
+          "libcutils.so",
+          "liblog.so",
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libq3dtools_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "9e7f9c4a1dab9ceff5be95b3b8a6573f7f6e559cbbb23324410c29e3a9eb62b5",
+        "needed": [
+          "libcutils.so",
+          "liblog.so",
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libq3dtools_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 35,
+      "added_strong_undefined_count": 13
+    },
+    {
+      "path": "proprietary/vendor/lib64/egl/libq3dtools_esx.so",
+      "original": {
+        "sha256": "9b16ea3ee7ec21c36ed2fdeda6f8aaf0f943e6b414735b1189dac6da3934ad38",
+        "needed": [
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libq3dtools_esx.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "a6094b9809f0280291fbc3edff37b652ea268a7c3978fd85cf15f5c5c44e535e",
+        "needed": [
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "libq3dtools_esx.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 1091,
+      "added_strong_undefined_count": 8
+    },
+    {
+      "path": "proprietary/vendor/lib64/libC2D2.so",
+      "original": {
+        "sha256": "3eb3423b1932cda00d7c5f2f305fd902f0d61c0538eb831f02cae533a69199d7",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libC2D2.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "c9133cc9f0d9379196637702e1f49e62a0b0eb21c27b07b8a44c44e412fb5c44",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libC2D2.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 6,
+      "added_strong_undefined_count": 1
+    },
+    {
+      "path": "proprietary/vendor/lib64/libCB.so",
+      "original": {
+        "sha256": "35f902488d044e0f466da3d000fc1caf70dd972ccad066e58e0ddcdb8bad6e4c",
+        "needed": [
+          "libcutils.so",
+          "liblog.so",
+          "libgsl.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libCB.so"
+        ],
+        "version_text": [
+          "QUALCOMM build: commit #2df12b3 changeid #I07da2d9908 Date: 10/04/18 Thu Local Branch:  Remote Branch: "
+        ],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "bccb23eacf97fcf92f57ae10f481714699a66e446251eb4e56018dfde743af4d",
+        "needed": [
+          "libcutils.so",
+          "liblog.so",
+          "libgsl.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libCB.so"
+        ],
+        "version_text": [
+          "QUALCOMM build: commit #a7d4a14 changeid #Iba1deb6915 Date: 07/23/20 Thu Local Branch:  Remote Branch: "
+        ],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 2,
+      "added_strong_undefined_count": 12
+    },
+    {
+      "path": "proprietary/vendor/lib64/libOpenCL.so",
+      "original": {
+        "sha256": "f541d025128eab9ef3c8fc41c2ea2440944da5fccdcf1576d9f443bba52a79f6",
+        "needed": [
+          "libcutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libOpenCL.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "73e72f4d027de412821e2847f951ebdf074dd6ea4df35984757b3030b210eceb",
+        "needed": [
+          "libcutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libOpenCL.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 0,
+      "added_strong_undefined_count": 5
+    },
+    {
+      "path": "proprietary/vendor/lib64/libadreno_utils.so",
+      "original": {
+        "sha256": "425dba8f277d04a5f3a1de183bb4162fbfb311c8e28e647252ae96d0f6d1f684",
+        "needed": [
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libadreno_utils.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "cd208dea96bb1f44b6116ca7475feb7d7b2dd0ce572404dfea4263fdd6573abb",
+        "needed": [
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libadreno_utils.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 19,
+      "added_strong_undefined_count": 2
+    },
+    {
+      "path": "proprietary/vendor/lib64/libc2d30_bltlib.so",
+      "original": {
+        "sha256": "f7c67767ed303258e28cfb3913c345e76e757e02b83f7e3ae12f0f37184848bd",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libc2d30_bltlib.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "854a9b3ea472d94061942865bc316e921f00600be9d4965847aa3f7e5f7cfbc4",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libc2d30_bltlib.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 75,
+      "added_strong_undefined_count": 1
+    },
+    {
+      "path": "proprietary/vendor/lib64/libgsl.so",
+      "original": {
+        "sha256": "98030479dff5b776b92dacd3d8a87c5b3c2d04f86beabf56e9b2877df0d83ec6",
+        "needed": [
+          "libcutils.so",
+          "liblog.so",
+          "libz.so",
+          "libsync.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libgsl.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "f094ed4240f5680e1aa41254fc8898d4f04d786071181b2d8b13992c9a091154",
+        "needed": [
+          "libcutils.so",
+          "liblog.so",
+          "libz.so",
+          "libsync.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libgsl.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 10,
+      "added_strong_undefined_count": 14
+    },
+    {
+      "path": "proprietary/vendor/lib64/libllvm-glnext.so",
+      "original": {
+        "sha256": "791450c3e4290daa06f120e95892270916a5e5dc5c2a9276a7a30f84842e00ef",
+        "needed": [
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libllvm-glnext.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "811d672b46c9d65a88e01d52dc4237363b5199e9eec38996923805b80e95c0c4",
+        "needed": [
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libllvm-glnext.so"
+        ],
+        "version_text": [
+          "5iV@9?",
+          "5jV@9G",
+          "TqV@9?",
+          "T`V@9q2",
+          "5iV@9?",
+          "5aV@9?",
+          "TaV@9?",
+          "TiV@9?",
+          "5iV@9?",
+          "5iV@9?",
+          "5dV@919",
+          "TjV@9_",
+          "5aV@9?",
+          "5jV@9_",
+          "TaV@9?",
+          "TcV@9HH",
+          "TqV@9?",
+          "5qV@9?",
+          "5bV@9_",
+          "5cV@9N*"
+        ],
+        "version_majors": [
+          919
+        ]
+      },
+      "new_needed": [],
+      "removed_export_count": 3,
+      "added_strong_undefined_count": 6
+    },
+    {
+      "path": "proprietary/vendor/lib64/librs_adreno.so",
+      "original": {
+        "sha256": "3913c7fc0b88f10a3a3f6c9a8b2a2f25ade720486766f259e9149b76d12e5cd5",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libCB.so",
+          "libz.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "librs_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "15b89f3bdb32b4a4c3ed7c9ea429fe47316dbf316cc513e0f1de0c9677af4d76",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libCB.so",
+          "libz.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "librs_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 0,
+      "added_strong_undefined_count": 9
+    }
+  ],
+  "errors": [],
+  "notes": [
+    "No GPU firmware, HWC/gralloc HAL, display-color or kernel files are replaced.",
+    "Check build-host linker namespaces and vendor consumers before deployment.",
+    "Boot, flickering, camera, video, suspend and both app ABIs need phone testing."
+  ],
+  "versions": {
+    "original": [
+      331
+    ],
+    "candidate": [
+      415
+    ]
+  },
+  "undefined_symbols_verified": false,
+  "source": {
+    "repository": "beingstargazer/vendor_xiaomi_santoni",
+    "revision": "d476641987d8cc6c861b48dd9bffac8f9167ce53",
+    "baseline": "69e3e328f2d2634643a562186f9c9c403397a0c5"
+  }
+}
