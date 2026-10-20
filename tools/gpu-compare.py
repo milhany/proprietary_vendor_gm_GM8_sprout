@@ -91,14 +91,14 @@ def main():
                         help="Optional source vendor tree; requires pristine original blobs.")
     args = parser.parse_args()
     manifest = json.loads(args.manifest.read_text())
-    if manifest["format"] != 1 or len(manifest["files"]) != 29:
+    if manifest["format"] != 1 or len(manifest["files"]) != 39:
         raise ValueError("Unexpected candidate manifest")
     work = args.work.resolve()
     work.mkdir(parents=True, exist_ok=True)
     jobs = []
     for row in manifest["files"]:
         path = row["path"]
-        if not re.fullmatch(r"proprietary/vendor/lib(?:64)?/(?:egl/)?[A-Za-z0-9_.-]+\.so", path):
+        if not re.fullmatch(r"proprietary/vendor/lib(?:64)?/(?:egl/|hw/)?[A-Za-z0-9_.-]+\.so", path):
             raise ValueError("Path outside approved GPU library directories: " + path)
         jobs.append((manifest["original_repository"], manifest["original_commit"],
                      path, row["original_sha"], row["original_size"], work / "original" / path))

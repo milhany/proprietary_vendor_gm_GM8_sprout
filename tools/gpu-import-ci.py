@@ -31,8 +31,11 @@ def main():
     if all(current[row["path"]] == row["donor_sha"] for row in manifest["files"]):
         print("All candidate libraries already imported; no commit required.")
         return
-    if any(current[row["path"]] != row["original_sha"] for row in manifest["files"]):
+    if any(current[row["path"]] not in (row["original_sha"], row["donor_sha"])
+           for row in manifest["files"]):
         raise ValueError("GPU files diverged from the reviewed baseline")
+    changed = [row["path"] for row in manifest["files"]
+               if current[row["path"]] != row["donor_sha"]]
     for row in manifest["files"]:
         target = root / row["path"]
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -53,7 +56,7 @@ def main():
     paths = [row["path"] for row in manifest["files"]] + [report_path]
     subprocess.check_call(["git", "add", "--sparse", "--", *paths])
     actual = set(git("diff", "--cached", "--name-only").splitlines())
-    if actual != set(paths):
+    if actual != set(changed + [report_path]):
         raise ValueError("Staged file set differs from the approved GPU inventory")
     for row in manifest["files"]:
         if git("rev-parse", ":" + row["path"]) != row["donor_sha"]:
@@ -63,7 +66,7 @@ def main():
                            "41898282+github-actions[bot]@users.noreply.github.com"])
     subprocess.check_call(["git", "commit", "-m",
         "gm8: stage audited V415 graphics libraries for hardware testing\n\n"
-        "Replace 29 existing ARM/ARM64 GPU libraries from the pinned Santoni\n"
+        "Replace 39 existing ARM/ARM64 GPU libraries from the pinned Santoni\n"
         "Android 10 set. CI verified Git blob hashes, ELF architecture, SONAMEs,\n"
         "dependency names and the V331 -> V415 embedded GL version change.\n\n"
         "Keep firmware, HWC/gralloc HALs and the kernel unchanged. Full symbol\n"

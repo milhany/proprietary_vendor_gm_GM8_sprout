@@ -55,28 +55,20 @@
       "original_size": 355432
     },
     {
-      "path": "proprietary/vendor/lib/libC2D2.so",
-      "donor_path": "santoni/proprietary/vendor/lib/libC2D2.so",
-      "donor_sha": "26cf408574565dc36ba069e3f7f4e51a80db1785",
-      "donor_size": 161772,
-      "original_sha": "180b75613fb151523e8581786dd8109f2be9d87f",
-      "original_size": 152712
+      "path": "proprietary/vendor/lib/egl/libQTapGLES.so",
+      "donor_path": "santoni/proprietary/vendor/lib/egl/libQTapGLES.so",
+      "donor_sha": "6ccdcdef38d08bb20e47bbf973e31f7133fc0532",
+      "donor_size": 26476,
+      "original_sha": "6c7421ea67c0260d567f1f8748bb5349a03bcafd",
+      "original_size": 83812
     },
     {
-      "path": "proprietary/vendor/lib/libCB.so",
-      "donor_path": "santoni/proprietary/vendor/lib/libCB.so",
-      "donor_sha": "865691309ba4d75611bb247c57a14355ff17ddd9",
-      "donor_size": 1926664,
-      "original_sha": "c5e89222885746b044604fb4f6c7965fcad626b0",
-      "original_size": 1585888
-    },
-    {
-      "path": "proprietary/vendor/lib/libOpenCL.so",
-      "donor_path": "santoni/proprietary/vendor/lib/libOpenCL.so",
-      "donor_sha": "bcddebf3189ea98057a60a01685e296903132765",
-      "donor_size": 96332,
-      "original_sha": "5a8b73c345604919501d007d16edb3eb8038e94e",
-      "original_size": 83220
+      "path": "proprietary/vendor/lib/hw/vulkan.msm8937.so",
+      "donor_path": "santoni/proprietary/vendor/lib/hw/vulkan.msm8937.so",
+      "donor_sha": "af880abc9838627d8145230ca9740521c617b86f",
+      "donor_size": 1348992,
+      "original_sha": "fd2f0c90cc1dda95a68760aa363853f3962e7ec1",
+      "original_size": 1751532
     },
     {
       "path": "proprietary/vendor/lib/libadreno_utils.so",
@@ -87,12 +79,12 @@
       "original_size": 60428
     },
     {
-      "path": "proprietary/vendor/lib/libc2d30-a3xx.so",
-      "donor_path": "santoni/proprietary/vendor/lib/libc2d30-a3xx.so",
-      "donor_sha": "e747c2cf1579f042f2459ae6988459d4ad681cb6",
-      "donor_size": 796204,
-      "original_sha": "0e69c8a55fba329565897ab7b7ed0887bcad80cb",
-      "original_size": 796920
+      "path": "proprietary/vendor/lib/libC2D2.so",
+      "donor_path": "santoni/proprietary/vendor/lib/libC2D2.so",
+      "donor_sha": "26cf408574565dc36ba069e3f7f4e51a80db1785",
+      "donor_size": 161772,
+      "original_sha": "180b75613fb151523e8581786dd8109f2be9d87f",
+      "original_size": 152712
     },
     {
       "path": "proprietary/vendor/lib/libc2d30_bltlib.so",
@@ -101,6 +93,22 @@
       "donor_size": 701684,
       "original_sha": "5f311d79b2ec0be0f830486a71b5653623c3e822",
       "original_size": 805312
+    },
+    {
+      "path": "proprietary/vendor/lib/libc2d30-a3xx.so",
+      "donor_path": "santoni/proprietary/vendor/lib/libc2d30-a3xx.so",
+      "donor_sha": "e747c2cf1579f042f2459ae6988459d4ad681cb6",
+      "donor_size": 796204,
+      "original_sha": "0e69c8a55fba329565897ab7b7ed0887bcad80cb",
+      "original_size": 796920
+    },
+    {
+      "path": "proprietary/vendor/lib/libCB.so",
+      "donor_path": "santoni/proprietary/vendor/lib/libCB.so",
+      "donor_sha": "865691309ba4d75611bb247c57a14355ff17ddd9",
+      "donor_size": 1926664,
+      "original_sha": "c5e89222885746b044604fb4f6c7965fcad626b0",
+      "original_size": 1585888
     },
     {
       "path": "proprietary/vendor/lib/libgsl.so",
@@ -119,12 +127,44 @@
       "original_size": 11192232
     },
     {
+      "path": "proprietary/vendor/lib/libllvm-qcom.so",
+      "donor_path": "santoni/proprietary/vendor/lib/libllvm-qcom.so",
+      "donor_sha": "7686ce80db232cb4b36b89620b7482b2fee2a49b",
+      "donor_size": 23218400,
+      "original_sha": "f2c842573846ea748dfbf99661485899e0184f27",
+      "original_size": 24231216
+    },
+    {
+      "path": "proprietary/vendor/lib/libOpenCL.so",
+      "donor_path": "santoni/proprietary/vendor/lib/libOpenCL.so",
+      "donor_sha": "bcddebf3189ea98057a60a01685e296903132765",
+      "donor_size": 96332,
+      "original_sha": "5a8b73c345604919501d007d16edb3eb8038e94e",
+      "original_size": 83220
+    },
+    {
+      "path": "proprietary/vendor/lib/librs_adreno_sha1.so",
+      "donor_path": "santoni/proprietary/vendor/lib/librs_adreno_sha1.so",
+      "donor_sha": "8189b0bf7ba8351ac2d5948c460b1a0b6860ad6f",
+      "donor_size": 24116,
+      "original_sha": "355663995d1142ad1e6814349ab8ddf08388895a",
+      "original_size": 10424
+    },
+    {
       "path": "proprietary/vendor/lib/librs_adreno.so",
       "donor_path": "santoni/proprietary/vendor/lib/librs_adreno.so",
       "donor_sha": "0a1a5468be0e2d3227d3ec77c185f6baf1ee7bd2",
       "donor_size": 584276,
       "original_sha": "de008152474a40faf5785dd97ce60dd56cd51dd2",
       "original_size": 443952
+    },
+    {
+      "path": "proprietary/vendor/lib/libRSDriver_adreno.so",
+      "donor_path": "santoni/proprietary/vendor/lib/libRSDriver_adreno.so",
+      "donor_sha": "bf82389c094cd76f52b5275e8b44b763f3dad834",
+      "donor_size": 145552,
+      "original_sha": "aa4885382bf4c23b683ccd2867b6627a597f99da",
+      "original_size": 145636
     },
     {
       "path": "proprietary/vendor/lib64/egl/eglSubDriverAndroid.so",
@@ -175,28 +215,20 @@
       "original_size": 538176
     },
     {
-      "path": "proprietary/vendor/lib64/libC2D2.so",
-      "donor_path": "santoni/proprietary/vendor/lib64/libC2D2.so",
-      "donor_sha": "45a3ad50c18772feb99a8f323a55584a2a816726",
-      "donor_size": 188400,
-      "original_sha": "2fa2fc1595a6e0b19640531c80eaaa7329fb90bc",
-      "original_size": 196368
+      "path": "proprietary/vendor/lib64/egl/libQTapGLES.so",
+      "donor_path": "santoni/proprietary/vendor/lib64/egl/libQTapGLES.so",
+      "donor_sha": "3ef2e9ac60a1545e85b5f199cef12a8fa88d70f5",
+      "donor_size": 18992,
+      "original_sha": "5fb53281ab5512e5cee2daa4ca940154134ef9b2",
+      "original_size": 116160
     },
     {
-      "path": "proprietary/vendor/lib64/libCB.so",
-      "donor_path": "santoni/proprietary/vendor/lib64/libCB.so",
-      "donor_sha": "0f9c99277636638251427639157e3ed85af0419a",
-      "donor_size": 2546888,
-      "original_sha": "5e61938885059332ffbb005ec172a3c51f50580b",
-      "original_size": 2055440
-    },
-    {
-      "path": "proprietary/vendor/lib64/libOpenCL.so",
-      "donor_path": "santoni/proprietary/vendor/lib64/libOpenCL.so",
-      "donor_sha": "6f8092433995bb5417b5fa5c850ea918fd9d4d8e",
-      "donor_size": 128840,
-      "original_sha": "1eda656999b197287ba7abc4d839c83f73b5acf4",
-      "original_size": 104640
+      "path": "proprietary/vendor/lib64/hw/vulkan.msm8937.so",
+      "donor_path": "santoni/proprietary/vendor/lib64/hw/vulkan.msm8937.so",
+      "donor_sha": "93545db5e3b9713e7b8e4b5d90f778b5fbd523ab",
+      "donor_size": 1641384,
+      "original_sha": "2dbda2535f793d206e56f65cba9fb90a627e5ac8",
+      "original_size": 2220904
     },
     {
       "path": "proprietary/vendor/lib64/libadreno_utils.so",
@@ -207,12 +239,28 @@
       "original_size": 72232
     },
     {
+      "path": "proprietary/vendor/lib64/libC2D2.so",
+      "donor_path": "santoni/proprietary/vendor/lib64/libC2D2.so",
+      "donor_sha": "45a3ad50c18772feb99a8f323a55584a2a816726",
+      "donor_size": 188400,
+      "original_sha": "2fa2fc1595a6e0b19640531c80eaaa7329fb90bc",
+      "original_size": 196368
+    },
+    {
       "path": "proprietary/vendor/lib64/libc2d30_bltlib.so",
       "donor_path": "santoni/proprietary/vendor/lib64/libc2d30_bltlib.so",
       "donor_sha": "eefd578fd4498affaf6c59f8ba3725370d046491",
       "donor_size": 876712,
       "original_sha": "ff8b026d54595be6f3ecc057c047ec58fdc76cd5",
       "original_size": 1058224
+    },
+    {
+      "path": "proprietary/vendor/lib64/libCB.so",
+      "donor_path": "santoni/proprietary/vendor/lib64/libCB.so",
+      "donor_sha": "0f9c99277636638251427639157e3ed85af0419a",
+      "donor_size": 2546888,
+      "original_sha": "5e61938885059332ffbb005ec172a3c51f50580b",
+      "original_size": 2055440
     },
     {
       "path": "proprietary/vendor/lib64/libgsl.so",
@@ -231,12 +279,44 @@
       "original_size": 15757416
     },
     {
+      "path": "proprietary/vendor/lib64/libllvm-qcom.so",
+      "donor_path": "santoni/proprietary/vendor/lib64/libllvm-qcom.so",
+      "donor_sha": "ac850f84afa3182ef9c27afca16c69e40083b0c0",
+      "donor_size": 31546720,
+      "original_sha": "795edb4201cfc3da8b574750f32bbcb48331e6be",
+      "original_size": 32263200
+    },
+    {
+      "path": "proprietary/vendor/lib64/libOpenCL.so",
+      "donor_path": "santoni/proprietary/vendor/lib64/libOpenCL.so",
+      "donor_sha": "6f8092433995bb5417b5fa5c850ea918fd9d4d8e",
+      "donor_size": 128840,
+      "original_sha": "1eda656999b197287ba7abc4d839c83f73b5acf4",
+      "original_size": 104640
+    },
+    {
+      "path": "proprietary/vendor/lib64/librs_adreno_sha1.so",
+      "donor_path": "santoni/proprietary/vendor/lib64/librs_adreno_sha1.so",
+      "donor_sha": "d032102ee709888cc35c5f34ff12ccc7ff10e471",
+      "donor_size": 15008,
+      "original_sha": "3bd35f2032acb5e93e0eb05f4a767e0cb67334bc",
+      "original_size": 10512
+    },
+    {
       "path": "proprietary/vendor/lib64/librs_adreno.so",
       "donor_path": "santoni/proprietary/vendor/lib64/librs_adreno.so",
       "donor_sha": "e52b0c6ea7a235845e469cf8ce94ca1d94013a10",
       "donor_size": 624696,
       "original_sha": "8a4a97bc63701e23867e63c970a0cadd6a12348a",
       "original_size": 484968
+    },
+    {
+      "path": "proprietary/vendor/lib64/libRSDriver_adreno.so",
+      "donor_path": "santoni/proprietary/vendor/lib64/libRSDriver_adreno.so",
+      "donor_sha": "e5ded97a433031a87bec72efdb98a3e12f2c4318",
+      "donor_size": 199536,
+      "original_sha": "f30a722b28b7521d803a0145e966dd8f983d3ebe",
+      "original_size": 199624
     }
   ],
   "vendor_sonames": {
