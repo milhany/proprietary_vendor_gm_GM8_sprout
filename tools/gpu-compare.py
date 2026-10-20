@@ -18,7 +18,7 @@ from pathlib import Path
 SYSTEM_LIBS = {
     "libc.so", "libm.so", "libdl.so", "liblog.so", "libc++.so",
     "libcutils.so", "libutils.so", "libbase.so", "libz.so", "libsync.so",
-    "libhardware.so", "libnativewindow.so", "libvndksupport.so",
+    "libhardware.so", "libnativewindow.so", "libvndksupport.so", "libion.so",
     "libEGL.so", "libGLESv1_CM.so", "libGLESv2.so", "libGLESv3.so",
     "libbinder.so", "libhidlbase.so", "libhidltransport.so", "libhwbinder.so",
 }
