@@ -138,7 +138,8 @@ def main():
             versions["candidate"].update(new["version_majors"])
         if old["soname"] != new["soname"]:
             report["errors"].append("SONAME changed: " + path)
-        available = set(manifest["vendor_sonames"][arch]) | SYSTEM_LIBS | replaced[arch]
+        available = (set(manifest["vendor_sonames"][arch]) | SYSTEM_LIBS
+                     | replaced[arch] | set(old["needed"]))
         missing = sorted(set(new["needed"]) - available)
         if missing:
             report["errors"].append("Unresolved dependency names for " + path + ": " + repr(missing))
