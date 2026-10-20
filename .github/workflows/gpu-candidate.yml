@@ -1,0 +1,38 @@
+name: GM8 GPU candidate audit
+on:
+  push:
+    branches: [lineage-19.1-gpu-test]
+    paths:
+      - 'tools/gpu-compare.py'
+      - 'tools/gpu-candidate.json'
+      - '.github/workflows/gpu-candidate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            tools
+            .github
+      - name: Validate Python syntax
+        run: python3 -m py_compile tools/gpu-compare.py
+      - name: Compare pinned 32-bit and 64-bit driver libraries
+        run: python3 tools/gpu-compare.py --work "$RUNNER_TEMP/gm8-gpu-audit"
+      - name: Save audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gm8-gpu-static-audit
+          path: ${{ runner.temp }}/gm8-gpu-audit/gpu-report.json
+          if-no-files-found: warn
+      - name: Summarize candidate
+        if: always()
+        run: |
+          if test -f "$RUNNER_TEMP/gm8-gpu-audit/gpu-report.json"; then
+            python3 -c 'import json,sys; r=json.load(open(sys.argv[1])); print("GL versions:",r["versions"]); print("Static checks passed:",r["static_checks_passed"]); print("Hardware:",r["kernel_compatibility"]); print("\n".join(r["errors"]))' "$RUNNER_TEMP/gm8-gpu-audit/gpu-report.json" >> "$GITHUB_STEP_SUMMARY"
+          fi
