@@ -277,6 +277,135 @@
       "added_strong_undefined_count": 16
     },
     {
+      "path": "proprietary/vendor/lib/egl/libQTapGLES.so",
+      "original": {
+        "sha256": "bbe535ffd82af5f026930bd7dfef67c04476772e00482e780a492c2bfe907485",
+        "needed": [
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libQTapGLES.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "03a3f608bd2c34a9f316d4984a5ad3f20b0aa635884a3bfea41808e6836f5e31",
+        "needed": [
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "libQTapGLES.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 309,
+      "added_strong_undefined_count": 7
+    },
+    {
+      "path": "proprietary/vendor/lib/hw/vulkan.msm8937.so",
+      "original": {
+        "sha256": "ad3fc08b4e0b39ff18f5ada9e63af4e90e6cdaed31cc921c312928e7f50ab4fe",
+        "needed": [
+          "libadreno_utils.so",
+          "libgsl.so",
+          "libz.so",
+          "liblog.so",
+          "libllvm-glnext.so",
+          "libcutils.so",
+          "libhardware.so",
+          "libnativewindow.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "vulkan.msm8937.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "13f38244ab6f1d752fd596f67b879b8430134915c787123efb792bd7451a3b01",
+        "needed": [
+          "libadreno_utils.so",
+          "libgsl.so",
+          "libz.so",
+          "liblog.so",
+          "libllvm-glnext.so",
+          "libcutils.so",
+          "libhardware.so",
+          "libnativewindow.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "vulkan.msm8937.so"
+        ],
+        "version_text": [
+          "Date: 07/23/20"
+        ],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 2613,
+      "added_strong_undefined_count": 20
+    },
+    {
+      "path": "proprietary/vendor/lib/libadreno_utils.so",
+      "original": {
+        "sha256": "dd0653983fec4fe681a8ee977c74bf297e034ebbe25e75c00c942b01ee8b9025",
+        "needed": [
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libadreno_utils.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "e3376c321d1d979d42da638db3f7e47ba0c877e109eacf66fba37f0375d58bc0",
+        "needed": [
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libadreno_utils.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 21,
+      "added_strong_undefined_count": 10
+    },
+    {
       "path": "proprietary/vendor/lib/libC2D2.so",
       "original": {
         "sha256": "5c194c3538b583554703bad167b0418d6958bf5a4fdf345c808587534abcc3f3",
@@ -315,6 +444,86 @@
       "new_needed": [],
       "removed_export_count": 8,
       "added_strong_undefined_count": 8
+    },
+    {
+      "path": "proprietary/vendor/lib/libc2d30_bltlib.so",
+      "original": {
+        "sha256": "3b8f2f9f953d8823584b47950a06076f81040095564601aba9294a2a6779464c",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libc2d30_bltlib.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "ac781a274496d2937370cbb89b2c0f358ac93f97b853fbac53dd5ac07de569f1",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libc2d30_bltlib.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 77,
+      "added_strong_undefined_count": 13
+    },
+    {
+      "path": "proprietary/vendor/lib/libc2d30-a3xx.so",
+      "original": {
+        "sha256": "12f2a429b09902a829de04a2f45cec3a483ed97bf0aa7dbf94ece4bf5d8c4e9d",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libc2d30-a3xx.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "73272c374dcea34f563b47b35214da292ad2816db1d917c8d2321fdb3b11d6e6",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libc2d30-a3xx.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 5,
+      "added_strong_undefined_count": 13
     },
     {
       "path": "proprietary/vendor/lib/libCB.so",
@@ -361,158 +570,6 @@
       "new_needed": [],
       "removed_export_count": 4,
       "added_strong_undefined_count": 17
-    },
-    {
-      "path": "proprietary/vendor/lib/libOpenCL.so",
-      "original": {
-        "sha256": "8a35066297e7f2fb153374c555463b6ca234053c6acce16d855ea749cc3cd9a1",
-        "needed": [
-          "libcutils.so",
-          "libc++.so",
-          "libc.so",
-          "libm.so",
-          "libdl.so"
-        ],
-        "soname": [
-          "libOpenCL.so"
-        ],
-        "version_text": [],
-        "version_majors": []
-      },
-      "candidate": {
-        "sha256": "f042f596954a003d543464ac0733e073a3137b863a44593a3c4cc7d599ab93b9",
-        "needed": [
-          "libcutils.so",
-          "libc++.so",
-          "libc.so",
-          "libm.so",
-          "libdl.so"
-        ],
-        "soname": [
-          "libOpenCL.so"
-        ],
-        "version_text": [],
-        "version_majors": []
-      },
-      "new_needed": [],
-      "removed_export_count": 2,
-      "added_strong_undefined_count": 13
-    },
-    {
-      "path": "proprietary/vendor/lib/libadreno_utils.so",
-      "original": {
-        "sha256": "dd0653983fec4fe681a8ee977c74bf297e034ebbe25e75c00c942b01ee8b9025",
-        "needed": [
-          "libgsl.so",
-          "libc++.so",
-          "libc.so",
-          "libm.so",
-          "libdl.so"
-        ],
-        "soname": [
-          "libadreno_utils.so"
-        ],
-        "version_text": [],
-        "version_majors": []
-      },
-      "candidate": {
-        "sha256": "e3376c321d1d979d42da638db3f7e47ba0c877e109eacf66fba37f0375d58bc0",
-        "needed": [
-          "libgsl.so",
-          "libc++.so",
-          "libc.so",
-          "libm.so",
-          "libdl.so"
-        ],
-        "soname": [
-          "libadreno_utils.so"
-        ],
-        "version_text": [],
-        "version_majors": []
-      },
-      "new_needed": [],
-      "removed_export_count": 21,
-      "added_strong_undefined_count": 10
-    },
-    {
-      "path": "proprietary/vendor/lib/libc2d30-a3xx.so",
-      "original": {
-        "sha256": "12f2a429b09902a829de04a2f45cec3a483ed97bf0aa7dbf94ece4bf5d8c4e9d",
-        "needed": [
-          "libgsl.so",
-          "libcutils.so",
-          "libutils.so",
-          "libc++.so",
-          "libc.so",
-          "libm.so",
-          "libdl.so"
-        ],
-        "soname": [
-          "libc2d30-a3xx.so"
-        ],
-        "version_text": [],
-        "version_majors": []
-      },
-      "candidate": {
-        "sha256": "73272c374dcea34f563b47b35214da292ad2816db1d917c8d2321fdb3b11d6e6",
-        "needed": [
-          "libgsl.so",
-          "libcutils.so",
-          "libutils.so",
-          "libc++.so",
-          "libc.so",
-          "libm.so",
-          "libdl.so"
-        ],
-        "soname": [
-          "libc2d30-a3xx.so"
-        ],
-        "version_text": [],
-        "version_majors": []
-      },
-      "new_needed": [],
-      "removed_export_count": 5,
-      "added_strong_undefined_count": 13
-    },
-    {
-      "path": "proprietary/vendor/lib/libc2d30_bltlib.so",
-      "original": {
-        "sha256": "3b8f2f9f953d8823584b47950a06076f81040095564601aba9294a2a6779464c",
-        "needed": [
-          "libgsl.so",
-          "libcutils.so",
-          "libutils.so",
-          "libc++.so",
-          "libc.so",
-          "libm.so",
-          "libdl.so"
-        ],
-        "soname": [
-          "libc2d30_bltlib.so"
-        ],
-        "version_text": [],
-        "version_majors": []
-      },
-      "candidate": {
-        "sha256": "ac781a274496d2937370cbb89b2c0f358ac93f97b853fbac53dd5ac07de569f1",
-        "needed": [
-          "libgsl.so",
-          "libcutils.so",
-          "libutils.so",
-          "libc++.so",
-          "libc.so",
-          "libm.so",
-          "libdl.so"
-        ],
-        "soname": [
-          "libc2d30_bltlib.so"
-        ],
-        "version_text": [],
-        "version_majors": []
-      },
-      "new_needed": [],
-      "removed_export_count": 77,
-      "added_strong_undefined_count": 13
     },
     {
       "path": "proprietary/vendor/lib/libgsl.so",
@@ -593,6 +650,110 @@
       "added_strong_undefined_count": 9
     },
     {
+      "path": "proprietary/vendor/lib/libllvm-qcom.so",
+      "original": {
+        "sha256": "48e036112564ca82ba5522fc351a9fc201e325118a77c5d80fe550192f33941c",
+        "needed": [
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libllvm-qcom.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "91d41fe1d8b4c09c2aaca90ee26a05ba2915181be1a33f838cfe4d2ae5eb44e1",
+        "needed": [
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libllvm-qcom.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 48,
+      "added_strong_undefined_count": 8
+    },
+    {
+      "path": "proprietary/vendor/lib/libOpenCL.so",
+      "original": {
+        "sha256": "8a35066297e7f2fb153374c555463b6ca234053c6acce16d855ea749cc3cd9a1",
+        "needed": [
+          "libcutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libOpenCL.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "f042f596954a003d543464ac0733e073a3137b863a44593a3c4cc7d599ab93b9",
+        "needed": [
+          "libcutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libOpenCL.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 2,
+      "added_strong_undefined_count": 13
+    },
+    {
+      "path": "proprietary/vendor/lib/librs_adreno_sha1.so",
+      "original": {
+        "sha256": "ca8c7cb7c9a8fb0d77fbc881ca5a47f18cc691954b1b30e8f9a01dd5ef713b2b",
+        "needed": [
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "librs_adreno_sha1.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "5d874d3ede0e8e191e6fdd520418db99994905b51788572225c1c05d32139faa",
+        "needed": [
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "librs_adreno_sha1.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 2,
+      "added_strong_undefined_count": 8
+    },
+    {
       "path": "proprietary/vendor/lib/librs_adreno.so",
       "original": {
         "sha256": "53ea55711d002716e98dc860896e7469128f1a10cbf2c6f3697756c8ebdfd18a",
@@ -633,6 +794,58 @@
       "new_needed": [],
       "removed_export_count": 2,
       "added_strong_undefined_count": 18
+    },
+    {
+      "path": "proprietary/vendor/lib/libRSDriver_adreno.so",
+      "original": {
+        "sha256": "d5fe3461ced0cc56879333a051538cf9a6b998e0bc278a3ecd48698e31f22c30",
+        "needed": [
+          "libRS_internal.so",
+          "libRSCpuRef.so",
+          "liblog.so",
+          "libEGL.so",
+          "libGLESv1_CM.so",
+          "libGLESv2.so",
+          "libnativewindow.so",
+          "librs_adreno.so",
+          "libbcinfo.so",
+          "libdl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "libRSDriver_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "ac847b75bd9c5dc5250a073e554a485dd15b2283dbb871584766650adfe01799",
+        "needed": [
+          "libRS_internal.so",
+          "libRSCpuRef.so",
+          "liblog.so",
+          "libEGL.so",
+          "libGLESv1_CM.so",
+          "libGLESv2.so",
+          "libnativewindow.so",
+          "librs_adreno.so",
+          "libbcinfo.so",
+          "libdl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "libRSDriver_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 3,
+      "added_strong_undefined_count": 5
     },
     {
       "path": "proprietary/vendor/lib64/egl/eglSubDriverAndroid.so",
@@ -906,6 +1119,138 @@
       "added_strong_undefined_count": 8
     },
     {
+      "path": "proprietary/vendor/lib64/egl/libQTapGLES.so",
+      "original": {
+        "sha256": "3833dda44407b889be53610aa9beb106f18a89770f0c9ebabf60edbe5d2f2b38",
+        "needed": [
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libQTapGLES.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "746dcfe484c5119253e696668b058ee6b2d8197448c6eddd96baadb7beded28c",
+        "needed": [
+          "libcutils.so",
+          "libdl.so",
+          "libz.so",
+          "liblog.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "libQTapGLES.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 308,
+      "added_strong_undefined_count": 0
+    },
+    {
+      "path": "proprietary/vendor/lib64/hw/vulkan.msm8937.so",
+      "original": {
+        "sha256": "c018cb085f1829ad4459b83def9c8868e3ae7c2331fb5e63d5cef9b989c0a0ef",
+        "needed": [
+          "libadreno_utils.so",
+          "libgsl.so",
+          "libz.so",
+          "liblog.so",
+          "libllvm-glnext.so",
+          "libcutils.so",
+          "libhardware.so",
+          "libnativewindow.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "vulkan.msm8937.so"
+        ],
+        "version_text": [
+          "7mV@9m",
+          "H7pV@9"
+        ],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "fe6c76f2d5d5e4a6a6d1c810aede1ca0e2de724a2a829dd0d62b2c3a573da986",
+        "needed": [
+          "libadreno_utils.so",
+          "libgsl.so",
+          "libz.so",
+          "liblog.so",
+          "libllvm-glnext.so",
+          "libcutils.so",
+          "libhardware.so",
+          "libnativewindow.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "vulkan.msm8937.so"
+        ],
+        "version_text": [
+          "Date: 07/23/20"
+        ],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 2611,
+      "added_strong_undefined_count": 13
+    },
+    {
+      "path": "proprietary/vendor/lib64/libadreno_utils.so",
+      "original": {
+        "sha256": "425dba8f277d04a5f3a1de183bb4162fbfb311c8e28e647252ae96d0f6d1f684",
+        "needed": [
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libadreno_utils.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "cd208dea96bb1f44b6116ca7475feb7d7b2dd0ce572404dfea4263fdd6573abb",
+        "needed": [
+          "libgsl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libadreno_utils.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 19,
+      "added_strong_undefined_count": 2
+    },
+    {
       "path": "proprietary/vendor/lib64/libC2D2.so",
       "original": {
         "sha256": "3eb3423b1932cda00d7c5f2f305fd902f0d61c0538eb831f02cae533a69199d7",
@@ -943,6 +1288,46 @@
       },
       "new_needed": [],
       "removed_export_count": 6,
+      "added_strong_undefined_count": 1
+    },
+    {
+      "path": "proprietary/vendor/lib64/libc2d30_bltlib.so",
+      "original": {
+        "sha256": "f7c67767ed303258e28cfb3913c345e76e757e02b83f7e3ae12f0f37184848bd",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libc2d30_bltlib.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "854a9b3ea472d94061942865bc316e921f00600be9d4965847aa3f7e5f7cfbc4",
+        "needed": [
+          "libgsl.so",
+          "libcutils.so",
+          "libutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libc2d30_bltlib.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 75,
       "added_strong_undefined_count": 1
     },
     {
@@ -990,118 +1375,6 @@
       "new_needed": [],
       "removed_export_count": 2,
       "added_strong_undefined_count": 12
-    },
-    {
-      "path": "proprietary/vendor/lib64/libOpenCL.so",
-      "original": {
-        "sha256": "f541d025128eab9ef3c8fc41c2ea2440944da5fccdcf1576d9f443bba52a79f6",
-        "needed": [
-          "libcutils.so",
-          "libc++.so",
-          "libc.so",
-          "libm.so",
-          "libdl.so"
-        ],
-        "soname": [
-          "libOpenCL.so"
-        ],
-        "version_text": [],
-        "version_majors": []
-      },
-      "candidate": {
-        "sha256": "73e72f4d027de412821e2847f951ebdf074dd6ea4df35984757b3030b210eceb",
-        "needed": [
-          "libcutils.so",
-          "libc++.so",
-          "libc.so",
-          "libm.so",
-          "libdl.so"
-        ],
-        "soname": [
-          "libOpenCL.so"
-        ],
-        "version_text": [],
-        "version_majors": []
-      },
-      "new_needed": [],
-      "removed_export_count": 0,
-      "added_strong_undefined_count": 5
-    },
-    {
-      "path": "proprietary/vendor/lib64/libadreno_utils.so",
-      "original": {
-        "sha256": "425dba8f277d04a5f3a1de183bb4162fbfb311c8e28e647252ae96d0f6d1f684",
-        "needed": [
-          "libgsl.so",
-          "libc++.so",
-          "libc.so",
-          "libm.so",
-          "libdl.so"
-        ],
-        "soname": [
-          "libadreno_utils.so"
-        ],
-        "version_text": [],
-        "version_majors": []
-      },
-      "candidate": {
-        "sha256": "cd208dea96bb1f44b6116ca7475feb7d7b2dd0ce572404dfea4263fdd6573abb",
-        "needed": [
-          "libgsl.so",
-          "libc++.so",
-          "libc.so",
-          "libm.so",
-          "libdl.so"
-        ],
-        "soname": [
-          "libadreno_utils.so"
-        ],
-        "version_text": [],
-        "version_majors": []
-      },
-      "new_needed": [],
-      "removed_export_count": 19,
-      "added_strong_undefined_count": 2
-    },
-    {
-      "path": "proprietary/vendor/lib64/libc2d30_bltlib.so",
-      "original": {
-        "sha256": "f7c67767ed303258e28cfb3913c345e76e757e02b83f7e3ae12f0f37184848bd",
-        "needed": [
-          "libgsl.so",
-          "libcutils.so",
-          "libutils.so",
-          "libc++.so",
-          "libc.so",
-          "libm.so",
-          "libdl.so"
-        ],
-        "soname": [
-          "libc2d30_bltlib.so"
-        ],
-        "version_text": [],
-        "version_majors": []
-      },
-      "candidate": {
-        "sha256": "854a9b3ea472d94061942865bc316e921f00600be9d4965847aa3f7e5f7cfbc4",
-        "needed": [
-          "libgsl.so",
-          "libcutils.so",
-          "libutils.so",
-          "libc++.so",
-          "libc.so",
-          "libm.so",
-          "libdl.so"
-        ],
-        "soname": [
-          "libc2d30_bltlib.so"
-        ],
-        "version_text": [],
-        "version_majors": []
-      },
-      "new_needed": [],
-      "removed_export_count": 75,
-      "added_strong_undefined_count": 1
     },
     {
       "path": "proprietary/vendor/lib64/libgsl.so",
@@ -1205,6 +1478,152 @@
       "added_strong_undefined_count": 6
     },
     {
+      "path": "proprietary/vendor/lib64/libllvm-qcom.so",
+      "original": {
+        "sha256": "0920a259a0b61690a2ee988ae85bd7f673a852cb484aec562ef3180818b52ea7",
+        "needed": [
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libllvm-qcom.so"
+        ],
+        "version_text": [
+          "TcV@9k",
+          "TbV@9B",
+          "TaV@9-",
+          "TbV@9_",
+          "TjV@9_",
+          "5iV@9+",
+          "TrV@9_",
+          "TbV@9_",
+          "TaV@9?",
+          "TrV@9N",
+          "TbV@9@",
+          "TjV@9_",
+          "TbV@9_",
+          "TqV@9?",
+          "TqV@9?",
+          "TcV@9p",
+          "TiV@9?",
+          "TrV@9I",
+          "TqV@9?",
+          "TjV@9_"
+        ],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "c35c36cd32e54fd24f5e4f9f1137ecc90387e3ff36a4f93e881f972cbe0c32f3",
+        "needed": [
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libllvm-qcom.so"
+        ],
+        "version_text": [
+          "5jV@9G",
+          "TqV@9?",
+          "TaV@9q2",
+          "5iV@9?",
+          "5jV@9_",
+          "TiV@9?",
+          "TjV@9_",
+          "5aV@9?",
+          "5iV@9?",
+          "TiV@9?",
+          "5iV@9?",
+          "5jV@9_",
+          "TjV@9_",
+          "TqV@9?",
+          "5qV@9?",
+          "5bV@9_",
+          "5`V@9e",
+          "TiV@9\"",
+          "5qV@9?",
+          "TjV@9_"
+        ],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 3,
+      "added_strong_undefined_count": 5
+    },
+    {
+      "path": "proprietary/vendor/lib64/libOpenCL.so",
+      "original": {
+        "sha256": "f541d025128eab9ef3c8fc41c2ea2440944da5fccdcf1576d9f443bba52a79f6",
+        "needed": [
+          "libcutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libOpenCL.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "73e72f4d027de412821e2847f951ebdf074dd6ea4df35984757b3030b210eceb",
+        "needed": [
+          "libcutils.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "libOpenCL.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 0,
+      "added_strong_undefined_count": 5
+    },
+    {
+      "path": "proprietary/vendor/lib64/librs_adreno_sha1.so",
+      "original": {
+        "sha256": "3c0ba78276d6918fc07283431933845d4c6275a0aa768876d662c1db6d662259",
+        "needed": [
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "librs_adreno_sha1.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "f50199aeeab3a702f9120e815972c1e58ded64790edfe375b7138b81bebda74a",
+        "needed": [
+          "libc++.so",
+          "libc.so",
+          "libm.so",
+          "libdl.so"
+        ],
+        "soname": [
+          "librs_adreno_sha1.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 0,
+      "added_strong_undefined_count": 0
+    },
+    {
       "path": "proprietary/vendor/lib64/librs_adreno.so",
       "original": {
         "sha256": "3913c7fc0b88f10a3a3f6c9a8b2a2f25ade720486766f259e9149b76d12e5cd5",
@@ -1245,6 +1664,58 @@
       "new_needed": [],
       "removed_export_count": 0,
       "added_strong_undefined_count": 9
+    },
+    {
+      "path": "proprietary/vendor/lib64/libRSDriver_adreno.so",
+      "original": {
+        "sha256": "6883368cb893f5be2023f4babc0c8054bc6668758bf217cedef859807adceb44",
+        "needed": [
+          "libRS_internal.so",
+          "libRSCpuRef.so",
+          "liblog.so",
+          "libEGL.so",
+          "libGLESv1_CM.so",
+          "libGLESv2.so",
+          "libnativewindow.so",
+          "librs_adreno.so",
+          "libbcinfo.so",
+          "libdl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "libRSDriver_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "candidate": {
+        "sha256": "11e1a1da81c7272500aa583c9eff21725c722bbbaa49cee9777f33cad614309c",
+        "needed": [
+          "libRS_internal.so",
+          "libRSCpuRef.so",
+          "liblog.so",
+          "libEGL.so",
+          "libGLESv1_CM.so",
+          "libGLESv2.so",
+          "libnativewindow.so",
+          "librs_adreno.so",
+          "libbcinfo.so",
+          "libdl.so",
+          "libc++.so",
+          "libc.so",
+          "libm.so"
+        ],
+        "soname": [
+          "libRSDriver_adreno.so"
+        ],
+        "version_text": [],
+        "version_majors": []
+      },
+      "new_needed": [],
+      "removed_export_count": 0,
+      "added_strong_undefined_count": 0
     }
   ],
   "errors": [],
