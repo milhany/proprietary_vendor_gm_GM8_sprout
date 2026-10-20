@@ -6,9 +6,10 @@ on:
       - 'tools/gpu-compare.py'
       - 'tools/gpu-candidate.json'
       - '.github/workflows/gpu-candidate.yml'
+      - 'tools/gpu-import-ci.py'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   audit:
     runs-on: ubuntu-24.04
@@ -20,9 +21,11 @@ jobs:
             tools
             .github
       - name: Validate Python syntax
-        run: python3 -m py_compile tools/gpu-compare.py
+        run: python3 -m py_compile tools/gpu-compare.py tools/gpu-import-ci.py
       - name: Compare pinned 32-bit and 64-bit driver libraries
         run: python3 tools/gpu-compare.py --work "$RUNNER_TEMP/gm8-gpu-audit"
+      - name: Import verified blobs on the experimental branch
+        run: python3 tools/gpu-import-ci.py
       - name: Save audit report
         if: always()
         uses: actions/upload-artifact@v4
