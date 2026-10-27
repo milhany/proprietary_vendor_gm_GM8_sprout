@@ -400,6 +400,12 @@ else
         fi
 
         case "$soc_id" in
+          "313")
+            # GM8/MSM8940: avoid the extra vmpressure-triggered reclaim worker.
+            # Normal VM reclaim, zRAM and LMK remain available. This is a
+            # single-policy performance experiment for Android 12 on GM8.
+            echo 0 > /sys/module/process_reclaim/parameters/enable_process_reclaim
+            ;;
           # Do not set PPR parameters for premium targets
           # sdm845 - 321, 341
           # msm8998 - 292, 319
