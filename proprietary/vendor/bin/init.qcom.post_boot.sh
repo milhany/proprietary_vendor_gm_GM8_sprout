@@ -243,6 +243,12 @@ function configure_zram_parameters() {
             echo 402653184 > /sys/block/zram0/disksize
         elif [ $MemTotal -le 1048576 ]; then
             echo 805306368 > /sys/block/zram0/disksize
+        elif [ "$target" == "msm8937" ] && [ "${soc_id:-0}" == "313" ] &&
+             [ "$low_ram" != "true" ] &&
+             [ $MemTotal -gt 2097152 ] && [ $MemTotal -le 3145728 ]; then
+            # GM8 3GB Android 12 trial: 1.5 GiB logical compressed swap.
+            # Set capacity before mkswap/swapon; RAM is allocated on demand.
+            echo 1610612736 > /sys/block/zram0/disksize
         else
             # Set Zram disk size=1GB for >=2GB Non-Go targets.
             echo 1073741824 > /sys/block/zram0/disksize

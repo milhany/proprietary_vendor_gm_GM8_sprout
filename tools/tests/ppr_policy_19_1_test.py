@@ -49,6 +49,37 @@ disable_core_ctl() { echo corectl; }
             "sys/module/process_reclaim/parameters/min_score_adj").exists()
 
 
+def execute_zram(source, memory, soc, platform="msm8937", low_ram="false"):
+    start = source.index("function configure_zram_parameters() {")
+    end = source.index("function configure_read_ahead_kb_values()", start)
+    function = source[start:end]
+    with tempfile.TemporaryDirectory(prefix="gm8-zram-policy-") as directory:
+        root = Path(directory)
+        (root / "proc").mkdir()
+        (root / "proc/meminfo").write_text(f"MemTotal:       {memory:8d} kB\n")
+        zram = root / "sys/block/zram0"
+        zram.mkdir(parents=True)
+        (zram / "disksize").write_text("0")
+        (zram / "comp_algorithm").write_text("[lzo] lz4")
+        function = re.sub(r"/(?:sys|proc)/", lambda match: str(root) + match[0], function)
+        # Device operations are substituted; no host swap device is accessed.
+        script = f"""
+target={platform}
+soc_id={soc}
+getprop() {{ echo {low_ram}; }}
+mkswap() {{ echo "mkswap:$*"; }}
+swapon() {{ echo "swapon:$*"; }}
+""" + function + "\nconfigure_zram_parameters\n"
+        result = subprocess.run(["bash", "-e", "-c", script], capture_output=True, text=True)
+        assert result.returncode == 0, result.stderr
+        assert result.stdout.splitlines() == ["mkswap:/dev/block/zram0", "swapon:/dev/block/zram0 -p 32758"]
+        if low_ram == "true":
+            assert (zram / "comp_algorithm").read_text().strip() == "lz4"
+        else:
+            assert (zram / "comp_algorithm").read_text() == "[lzo] lz4"
+        return int((zram / "disksize").read_text())
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--vendor", type=Path, required=True)
@@ -62,9 +93,22 @@ def main():
     assert execute(current, 313, 1) == ("0", False)
     assert execute(current, 294, 0) == execute(baseline, 294, 0) == ("1", True)
     assert execute(current, 321, 0) == execute(baseline, 321, 0) == ("0", False)
+    assert execute_zram(baseline, 2891416, 313) == 1073741824
+    assert execute_zram(current, 2891416, 313) == 1610612736
+    for memory, soc, platform, low_ram in (
+            (524288, 313, "msm8937", "false"),
+            (1048576, 313, "msm8937", "true"),
+            (1900000, 313, "msm8937", "false"),
+            (2891416, 294, "msm8937", "false"),
+            (3800000, 313, "msm8937", "false"),
+            (2891416, 313, "msm8953", "false"),
+            (2891416, 313, "msm8937", "true")):
+        assert execute_zram(current, memory, soc, platform, low_ram) == execute_zram(
+            baseline, memory, soc, platform, low_ram)
     print("PASS: actual GM8 memory function stops PPR even if previously enabled")
     print("PASS: LMK thresholds, adaptive LMK and normal swap/zRAM calls preserved")
     print("PASS: other SoC branches retain their original behavior; modified function executes")
+    print("PASS: actual GM8 zRAM capacity is 1.5 GiB; other RAM/SoC/Go cases and compression retained")
 
 
 if __name__ == "__main__":
