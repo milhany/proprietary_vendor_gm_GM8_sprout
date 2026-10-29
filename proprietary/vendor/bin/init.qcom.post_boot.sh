@@ -312,6 +312,26 @@ function enable_swap() {
 }
 
 function configure_memory_parameters() {
+    # GM8 userspace-LMK candidate: the paired kernel omits the old LMK.
+    # Keep normal reclaim/zRAM, without accessing absent KLMK/ALMK nodes.
+    if [ -f /sys/devices/soc0/soc_id ]; then
+        gm8_memory_soc=`cat /sys/devices/soc0/soc_id`
+    else
+        gm8_memory_soc=`cat /sys/devices/system/soc/soc0/id`
+    fi
+    if [ "$gm8_memory_soc" == "313" ] &&
+       [ ! -d /sys/module/lowmemorykiller ]; then
+        if [ -f /sys/module/process_reclaim/parameters/enable_process_reclaim ]; then
+            echo 0 > /sys/module/process_reclaim/parameters/enable_process_reclaim
+        fi
+        echo 0 > /sys/module/vmpressure/parameters/allocstall_threshold
+        echo 100 > /proc/sys/vm/swappiness
+        configure_zram_parameters
+        configure_read_ahead_kb_values
+        enable_swap
+        return
+    fi
+
     # Set Memory parameters.
     #
     # Set per_process_reclaim tuning parameters
