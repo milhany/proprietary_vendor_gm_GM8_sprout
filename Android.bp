@@ -5,7 +5,7 @@
 soong_namespace {
 }
 
-prebuilt_etc_xml {
+prebuilt_etc {
     name: "android.hardware.gnss@2.0-service-qti",
     owner: "gm",
     src: "proprietary/vendor/etc/vintf/manifest/android.hardware.gnss@2.0-service-qti.xml",
@@ -14,7 +14,7 @@ prebuilt_etc_xml {
     soc_specific: true,
 }
 
-prebuilt_etc_xml {
+prebuilt_etc {
     name: "vendor.qti.gnss@3.0-service",
     owner: "gm",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml",
