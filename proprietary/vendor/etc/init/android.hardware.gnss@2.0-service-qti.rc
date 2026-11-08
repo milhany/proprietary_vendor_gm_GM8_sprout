@@ -1,4 +1,5 @@
 service gnss_service /vendor/bin/hw/android.hardware.gnss@2.0-service-qti
     class hal
+    interface android.hardware.gnss@2.0::IGnss default
     user gps
     group system gps radio vendor_qti_diag
